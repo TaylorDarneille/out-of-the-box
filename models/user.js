@@ -1,8 +1,8 @@
 'use strict';
-var bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 module.exports = (sequelize, DataTypes) => {
-  var user = sequelize.define('user', {
+  const user = sequelize.define('user', {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     username: {
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     hooks: {
       beforeCreate: function(pendingUser, options){
         if(pendingUser && pendingUser.password) {
-          var hash = bcrypt.hashSync(pendingUser.password, 10);
+          let hash = bcrypt.hashSync(pendingUser.password, 10); 
           pendingUser.password = hash; 
         }
       }
@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        models.user.hasMany(models.comment);
       }
     }
   });
@@ -47,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   user.prototype.toJSON = function() {
-    var user = this.get();
+    let user = this.get();
     delete user.password;
     return user;
   }
