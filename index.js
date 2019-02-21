@@ -1,7 +1,6 @@
 require('dotenv').config();
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
-var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isLoggedIn.js');
 var passport  = require('./config/passportConfig.js');
@@ -9,7 +8,7 @@ var session = require('express-session');
 var app = express();
 
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));
 app.use(ejsLayouts);
 app.use(session({	//session has to be ABOVE passport and flash
 	secret: process.env.SESSION_SECRET,
