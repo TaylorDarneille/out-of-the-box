@@ -31,7 +31,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
 	let landingPage = req.user ? 'dashboard.ejs' : 'landingpage.ejs';
 	res.render(landingPage);
-	// res.render(landingPage);
 });
 
 app.use('/auth', require('./controllers/auth'));
