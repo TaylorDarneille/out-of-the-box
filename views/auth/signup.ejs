@@ -1,29 +1,73 @@
-<h2>SIGNUP</h2>
-
-<form method="post" action="/auth/signup">
-	<div class="form-group">
-		<label>First Name:</label>
-		<input type="text" name="firstname" class="form-control" placeholder="Your Name">
+<div class="row">
+	<div class="form-card col s10 offset-s1 m8 offset-m2">
+		<h3>Sign Up</h3>
+		<h5>> Please provide us with your information:</h5>
+		<br />
+		<form method="post" action="/auth/signup" class="col s12">
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">perm_contact_calendar</i>
+					<input required type="text" name="firstname" class="validate" placeholder="First Name" />
+					<span class="helper-text" data-error="Please enter your first name." data-success="OK"></span>
+					<label for="firstname">First Name:</label>
+				</div>
+				<div class="input-field col s6">
+					<input required type="text" name="lastname" class="validate" placeholder="Last Name" />
+					<span class="helper-text" data-error="Please enter your last name." data-success="OK"></span>
+					<label for="lastname">Last Name:</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">perm_identity</i>
+					<input required type="text" name="username" class="validate" placeholder="Username" />
+					<span class="helper-text" data-error="Please enter a display name." data-success="OK"></span>
+					<label for="username">Display Name:</label>
+				</div>
+				<div class="input-field col s6">
+					<input required type="email" name="email" class="validate" placeholder="Email" />
+					<span class="helper-text" data-error="Please enter a valid email address." data-success="OK"></span>
+					<label for="email">Email:</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">vpn_key</i>
+					<input
+						required
+						type="password"
+						minlength="8"
+						name="password"
+						class="validate"
+						placeholder="Password"
+					/>
+					<span
+						class="helper-text"
+						data-error="Please enter a valid password of at least 8 characters."
+						data-success="OK"
+					></span>
+					<label for="password">Password:</label>
+				</div>
+				<div class="input-field col s6">
+					<input
+						required
+						type="password"
+						name="passwordVerify"
+						class="validate"
+						minlength="8"
+						placeholder="Validate Password"
+					/>
+					<span
+						class="helper-text"
+						data-error="Please re-enter your valid password."
+						data-success="OK"
+					></span>
+					<label for="passwordVerify">Password Verification:</label>
+				</div>
+			</div>
+			<div class="row center">
+				<input type="submit" value="Sign Up" class="submit-button btn waves-effect grey lighten-1" />
+			</div>
+		</form>
 	</div>
-	<div class="form-group">
-		<label>Last Name</label>
-		<input type="text" name="lastname" class="form-control" placeholder="Surname">
-	</div>
-	<div class="form-group">
-		<label>Display Name:</label>
-		<input type="text" name="username" class="form-control" placeholder="Your Username">
-	</div>
-	<div class="form-group">
-		<label>Email:</label>
-		<input type="text" name="email" class="form-control" placeholder="Your Email">
-	</div>
-	<div class="form-group">
-		<label>Password</label>
-		<input type="password" name="password" class="form-control" placeholder="Your Password">
-	</div>
-	<div class="form-group">
-		<label>Password Verification:</label>
-		<input type="password" name="passwordVerify" class="form-control" placeholder="Your Password">
-	</div>
-	<input type="submit" value="Sign Up" class = "btn btn-success">
-</form>
+</div>
