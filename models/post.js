@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     models.post.hasMany(models.comment);
     models.post.belongsTo(models.site);
     models.post.belongsToMany(models.user, {through: 'UserPost'});
-    models.post.belongsToMany(model.topic, {through: 'TopicPost'});
+    models.post.belongsToMany(models.topic, {through: 'TopicPost'});
   };
   return post;
 };
