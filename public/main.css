@@ -25,7 +25,7 @@ body {
 	border-radius: 10px;
 	background-color: #212121;
 	color: whitesmoke;
-	margin: 10em;
+	margin: 5em;
 	padding: 3em !important;
 }
 
@@ -55,8 +55,18 @@ body {
 
 /* media queries */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 	.brand-logo {
 		font-size: 1.7rem !important;
+	}
+	.form-card {
+		padding: 2em !important;
+		margin: 3em;
+	}
+	h3 {
+		font-size: 2rem;
+	}
+	h5 {
+		font-size: 1.5rem;
 	}
 }
