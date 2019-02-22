@@ -6,35 +6,63 @@
 		<form method="post" action="/auth/signup" class="col s12">
 			<div class="row">
 				<div class="input-field col s6">
-					<i class="material-icons prefix">account_circle</i>
-					<input type="text" name="firstname" class="validate" placeholder="First Name" />
-					<label>First Name:</label>
+					<i class="material-icons prefix">perm_contact_calendar</i>
+					<input required type="text" name="firstname" class="validate" placeholder="First Name" />
+					<span class="helper-text" data-error="Please enter your first name." data-success="OK"></span>
+					<label for="firstname">First Name:</label>
 				</div>
 				<div class="input-field col s6">
-					<input type="text" name="lastname" class="validate" placeholder="Last Name" />
-					<label>Last Name:</label>
+					<input required type="text" name="lastname" class="validate" placeholder="Last Name" />
+					<span class="helper-text" data-error="Please enter your last name." data-success="OK"></span>
+					<label for="lastname">Last Name:</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s6">
 					<i class="material-icons prefix">perm_identity</i>
-					<input type="text" name="username" class="validate" placeholder="Username" />
-					<label>Display Name:</label>
+					<input required type="text" name="username" class="validate" placeholder="Username" />
+					<span class="helper-text" data-error="Please enter a display name." data-success="OK"></span>
+					<label for="username">Display Name:</label>
 				</div>
 				<div class="input-field col s6">
-					<input type="text" name="email" class="validate" placeholder="Email" />
-					<label>Email:</label>
+					<input required type="email" name="email" class="validate" placeholder="Email" />
+					<span class="helper-text" data-error="Please enter a valid email address." data-success="OK"></span>
+					<label for="email">Email:</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s6">
 					<i class="material-icons prefix">vpn_key</i>
-					<input type="password" name="password" class="validate" placeholder="Password" />
-					<label>Password:</label>
+					<input
+						required
+						type="password"
+						minlength="8"
+						name="password"
+						class="validate"
+						placeholder="Password"
+					/>
+					<span
+						class="helper-text"
+						data-error="Please enter a valid password of at least 8 characters."
+						data-success="OK"
+					></span>
+					<label for="password">Password:</label>
 				</div>
 				<div class="input-field col s6">
-					<input type="password" name="passwordVerify" class="validate" placeholder="Validate Password" />
-					<label>Password Verification:</label>
+					<input
+						required
+						type="password"
+						name="passwordVerify"
+						class="validate"
+						minlength="8"
+						placeholder="Validate Password"
+					/>
+					<span
+						class="helper-text"
+						data-error="Please re-enter your valid password."
+						data-success="OK"
+					></span>
+					<label for="passwordVerify">Password Verification:</label>
 				</div>
 			</div>
 			<div class="row center">

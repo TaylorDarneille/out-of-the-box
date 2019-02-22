@@ -1,20 +1,27 @@
 <div class="row">
 	<div class="form-card col s10 offset-s1 m8 offset-m2">
 		<h3>Welcome back!</h3>
-		<h5>> Please log in.</h5>
+		<h5><span class="accent">></span> Please log in.</h5>
 		<br />
 		<form method="post" action="/auth/login" class="col s12">
 			<div class="row">
 				<div class="input-field">
 					<i class="material-icons prefix">email</i>
-					<input type="email" name="email" class="validate" placeholder="Your Email" />
+					<input required type="email" name="email" class="validate" placeholder="Your Email" />
 					<span class="helper-text" data-error="Please enter a valid email address." data-success="OK"></span>
 					<label for="email">Email:</label>
 				</div>
 
 				<div class="input-field">
 					<i class="material-icons prefix">vpn_key</i>
-					<input type="password" name="password" class="validate" placeholder="Your Password" />
+					<input
+						required
+						type="password"
+						minlength="8"
+						name="password"
+						class="validate"
+						placeholder="Your Password"
+					/>
 					<span class="helper-text" data-error="Please enter a password." data-success="OK"></span>
 					<label for="password">Password:</label>
 				</div>

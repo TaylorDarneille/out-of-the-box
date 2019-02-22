@@ -39,7 +39,7 @@ body {
 
 /* label color */
 .input-field label {
-	color: whitesmoke !important;
+	color: #64ffda !important;
 }
 /* label underline focus color */
 .input-field input[type='email']:focus,
@@ -49,7 +49,8 @@ body {
 	box-shadow: 0 1px 0 0 #64ffda;
 }
 /* icon prefix focus color */
-.input-field .prefix.active {
+.input-field .prefix.active,
+.accent {
 	color: #64ffda;
 }
 
