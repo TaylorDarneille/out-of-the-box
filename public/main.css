@@ -1,15 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-logo {
+	font-family: 'Roboto Slab', serif;
+}
+
+body {
+	background-image: url('http://static.tumblr.com/hojenan/zzhm3f1p5/brick3.jpg');
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit-button > .waves-button-input {
+	color: whitesmoke !important;
+	text-shadow: 2px 1px 1px rgba(39, 39, 39, 0.5);
+}
+
+.form-card {
+	border-radius: 10px;
+	background-color: #212121;
+	color: whitesmoke;
+	margin: 10em;
+	padding: 3em !important;
+}
+
+.form-card > h5 {
+	color: rgb(206, 206, 206);
+}
+
+.input-field input {
+	color: white !important;
+}
+
 /* label color */
 .input-field label {
-	color: #000 !important;
+	color: whitesmoke !important;
 }
 /* label underline focus color */
 .input-field input[type='email']:focus,
 .input-field input[type='password']:focus,
 .input-field input[type='text']:focus {
-	border-bottom: 1px solid #000 !important;
-	box-shadow: 0 1px 0 0 #000 !important;
+	border-bottom: 1px solid #64ffda;
+	box-shadow: 0 1px 0 0 #64ffda;
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
-	color: #000;
+	color: #64ffda;
 }

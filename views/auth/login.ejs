@@ -1,22 +1,28 @@
-<h2>LOGIN</h2>
 <div class="row">
-	<form method="post" action="/auth/login" class="col s12">
-		<div class="row">
-			<div class="input-field">
-				<i class="material-icons prefix">account_circle</i>
-				<input type="email" name="email" class="validate" placeholder="Your Email" />
-				<span class="helper-text" data-error="Please enter a valid email address." data-success="OK"></span>
-				<label for="email">Email:</label>
-			</div>
+	<div class="form-card col s10 offset-s1 m8 offset-m2">
+		<h2>Welcome back!</h2>
+		<h5>Please log in.</h5>
+		<br />
+		<form method="post" action="/auth/login" class="col s12">
+			<div class="row">
+				<div class="input-field">
+					<i class="material-icons prefix">account_circle</i>
+					<input type="email" name="email" class="validate" placeholder="Your Email" />
+					<span class="helper-text" data-error="Please enter a valid email address." data-success="OK"></span>
+					<label for="email">Email:</label>
+				</div>
 
-			<div class="input-field">
-				<i class="material-icons prefix">vpn_key</i>
-				<input type="password" name="password" class="validate" placeholder="Your Password" />
-				<span class="helper-text" data-error="Please enter a password." data-success="OK"></span>
-				<label for="password">Password:</label>
-			</div>
+				<div class="input-field">
+					<i class="material-icons prefix">vpn_key</i>
+					<input type="password" name="password" class="validate" placeholder="Your Password" />
+					<span class="helper-text" data-error="Please enter a password." data-success="OK"></span>
+					<label for="password">Password:</label>
+				</div>
 
-			<input type="submit" value="Login" class="btn waves-effect white-text" />
-		</div>
-	</form>
+				<div class="input-field center">
+					<input type="submit" value="Login" class="submit-button btn waves-effect grey lighten-1" />
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
