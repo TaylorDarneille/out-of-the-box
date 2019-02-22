@@ -32,7 +32,7 @@ router.post('/signup', function(req, res, next){
 		if(wasCreated) {
 			//Good job, you didn't try to make a duplicate!
 			passport.authenticate('local', {
-				successRedirect: '/profile',
+				successRedirect: '/dashboard',
 				successFlash: 'Successfully Logged In'
 			})(req, res, next);
 		}
