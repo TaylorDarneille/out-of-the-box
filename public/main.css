@@ -52,3 +52,11 @@ body {
 .input-field .prefix.active {
 	color: #64ffda;
 }
+
+/* media queries */
+
+@media only screen and (max-width: 400px) {
+	.brand-logo {
+		font-size: 1.7rem !important;
+	}
+}
