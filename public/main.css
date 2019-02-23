@@ -33,6 +33,28 @@ body {
 	color: rgb(206, 206, 206);
 }
 
+.card-panel {
+	background-color: #212121;
+	margin-top: 3rem;
+	font-size: 1.4rem;
+	border-radius: 15px !important;
+}
+
+.card-panel .alert-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-panel span {
+	padding-left: 0.35em;
+}
+
+.card-panel p {
+	font-size: 0.5em;
+	margin-bottom: 0;
+}
+
 .input-field input {
 	color: white !important;
 }
