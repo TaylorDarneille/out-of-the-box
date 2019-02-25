@@ -1,11 +1,64 @@
-<div>
-	<h3>Welcome back, <%= currentUser.firstname %>!</h3>
+<div class="row">
+	<div class="col s12 m10 offset-m1 center">
+		<h3 id="banner-text">Welcome back, <%= currentUser.firstname %>!</h3>
+	</div>
 </div>
-<div>
-	<h3>Posts I Wrote</h3>
-		<a href="/posts/new">Click here</a> to write your first post!
-</div>
-<div>
-	<h3>Posts I'm Following</h3>
-		You aren't tracking any posts yet!
+<div class="row">
+	<div class="col s12 m10 offset-m1 l6">
+		<div class="form-card z-depth-2">
+			<h4>My Posts</h4>
+
+			<!-- if no posts { -->
+			<p><a href="#">Click here</a> to write your first post!</p>
+
+			<!-- } else if there are posts { -->
+			<!-- <p><a href="#">Click here</a> to write a new post!</p> -->
+			<div class="scroll-container s12">
+				<ul class="browser-default">
+					<li>
+						this is where posts will go
+					</li>
+					<li>
+						this is where posts will go
+					</li>
+					<li>
+						this is where posts will go
+					</li>
+					<li>
+						this is where posts will go
+					</li>
+				</ul>
+			</div>
+
+			<!-- } -->
+		</div>
+	</div>
+	<div class="col s12 m10 offset-m1">
+		<div class="form-card z-depth-2">
+			<h4>Followed Posts</h4>
+
+			<!-- if no followed posts { -->
+			<p>You aren't tracking any posts yet! <a href="#">Explore here</a>.</p>
+
+			<!-- } else if there are followed posts { -->
+			<div class="scroll-container s12">
+				<ul class="browser-default">
+					<li>
+						this is where followed posts go
+					</li>
+					<li>
+						this is where followed posts go
+					</li>
+					<li>
+						this is where followed posts go
+					</li>
+					<li>
+						this is where followed posts go
+					</li>
+				</ul>
+			</div>
+
+			<!-- } -->
+		</div>
+	</div>
 </div>

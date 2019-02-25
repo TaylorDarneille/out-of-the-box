@@ -1,21 +1,25 @@
 <div class="center" onclick="alertDismiss()" id="alert">
 	<% if(alerts.error) {%> <% alerts.error.forEach(function(msg) {%>
 	<div class="row center">
-		<div class="col s12 m4 offset-m4">
-			<div class="card-panel amber lighten-1 center">
-				<span class="white-text">
-					<%= msg %>
-				</span>
+		<div class="col s12 m8 offset-m2 l4 offset-l4">
+			<div class="card-panel" style="border: #ffa726 4px solid;">
+				<div class="alert-content">
+					<i class="material-icons medium white-text" style="text-shadow: #ffa726 0 0 14px;">error</i>
+					<span class="white-text"><%= msg %> </span>
+				</div>
+				<p class="grey-text">(Click me to hide.)</p>
 			</div>
 		</div>
 	</div>
 	<% }); %> <% } %> <% if(alerts.success) { %> <% alerts.success.forEach(function(msg) { %>
 	<div class="row">
-		<div class="col s12 m4 offset-m4">
-			<div class="card-panel indigo lighten-3 center">
-				<span class="white-text">
-					<%= msg %>
-				</span>
+		<div class="col s12 m8 offset-m2 l4 offset-l4">
+			<div class="card-panel" style="border: #9fa8da 5px solid;">
+				<div class="alert-content">
+					<i class="material-icons medium white-text" style="text-shadow: #9fa8da 0 0 14px;">done</i>
+					<span class="white-text"> <%= msg %> </span>
+				</div>
+				<p class="grey-text">(Click me to hide.)</p>
 			</div>
 		</div>
 	</div>
