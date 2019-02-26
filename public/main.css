@@ -94,8 +94,21 @@ body {
 	color: white !important;
 }
 
+.materialize-textarea {
+	background-color: whitesmoke !important;
+	color: #212121;
+	border-radius: 5px !important;
+	padding-left: 3px !important;
+	padding-right: 3px !important;
+}
+
+.select-wrapper .caret {
+	background-color: #64ffdba8 !important;
+	border-radius: 50% !important;
+}
+
 /* label color */
-.input-field label {
+label {
 	color: #64ffda !important;
 }
 /* label underline focus color */

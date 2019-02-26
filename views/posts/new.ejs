@@ -1,20 +1,45 @@
-<h1>Create a new post</h1>
+<div class="row">
+	<div class="form-card col s10 offset-s1 m8 offset-m2 z-depth-2">
+		<h4>Create a new post</h4>
 
-<form action="/posts" method="POST">
-  <div>
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" required>
-    <label for="content">Content</label>
-    <input type="text" id="content" name="content" required>
-    <label for="site">Sites:</label>
-    <select name="siteId" id="site">
-          <option value="id" > Here is a site</option>
-          <option value="id" > Here is a site</option>
-          <option value="id" > Here is a site</option>
-          <option value="id" > Here is a site</option>
-    </select>
-    <label>Topics:</label>
-    <input type="text" name="topics" placeholder="comma-separated list of topics"  >
-    <input type="submit">
+		<form action="/posts" method="POST">
+			<div class="row">
+				<div class="input-field col s5">
+					<label for="subject">Subject</label>
+					<input type="text" id="subject" name="subject" required />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<label>Content:</label>
+					<div class="input-field">
+						<textarea
+							class="materialize-textarea"
+							type="text"
+							id="content"
+							name="content"
+							required
+						></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<select name="siteId" id="site">
+						<option value="id"> Here is a site</option>
+						<option value="id"> Here is a site</option>
+						<option value="id"> Here is a site</option>
+						<option value="id"> Here is a site</option>
+					</select>
+					<label for="site">Sites:</label>
+				</div>
 
-</form>
+				<div class="input-field col s12 m6">
+					<label>Topics:</label>
+					<input type="text" name="topics" placeholder="comma-separated list of topics" />
+				</div>
+			</div>
+			<input type="submit" />
+		</form>
+	</div>
+</div>
