@@ -1,9 +1,9 @@
-var express = require('express');
-var passport = require('../config/passportConfig');
-var db = require('../models');
-var router = express.Router();
+const express = require('express');
+const passport = require('../config/passportConfig');
+const db = require('../models');
+const router = express.Router();
 
-router.get('/login', function(req, res) {
+router.get('/login', (req, res) => {
 	res.render('auth/login.ejs');
 });
 
@@ -17,11 +17,11 @@ router.post(
 	})
 );
 
-router.get('/signup', function(req, res) {
+router.get('/signup', (req, res) => {
 	res.render('auth/signup.ejs');
 });
 
-router.post('/signup', function(req, res, next) {
+router.post('/signup', (req, res, next) => {
 	console.log('req.body is', req.body);
 	db.user
 		.findOrCreate({
@@ -33,7 +33,7 @@ router.post('/signup', function(req, res, next) {
 				password: req.body.password,
 			},
 		})
-		.spread(function(user, wasCreated) {
+		.spread( (user, wasCreated) => {
 			if (wasCreated) {
 				//Good job, you didn't try to make a duplicate!
 				passport.authenticate('local', {
@@ -52,7 +52,7 @@ router.post('/signup', function(req, res, next) {
 		});
 });
 
-router.get('/logout', function(req, res) {
+router.get('/logout', (req, res) => {
 	req.logout();
 	req.flash('success', 'You logged out successfully!');
 	res.redirect('/');
