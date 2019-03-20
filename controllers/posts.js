@@ -3,20 +3,30 @@ const router = express.Router()
 const db = require('../models')
 const isLoggedIn = require('../middleware/isLoggedIn.js');
 
-router.get('/new', isLoggedIn, (req, res) => {
-	if(!req.user) {
-		res.send("oops! you're not logged in!")
-	}
+// TODO: ADD PROTECTION AGAIN
+router.get('/new', (req, res) => {
     res.render('posts/new.ejs')
 })
 
+// TODO: ADD PROTECTION AGAIN
 router.post('/', (req, res) => {
-	// db.post.insert({
-	// 	subject: req.body.subject,
-	// 	content: req.body.content,	
-	// })
-	req.body.topics = req.body.topics.split(", ")
-	res.send(req.user)
+	db.post.create({
+		subject: req.body.subject,
+		content: req.body.content	
+	})
+	.then( createdPost => {
+		topics = req.body.topics.split(", ")
+		topics.forEach( t => {
+			db.topic.create({
+				name: t
+			})
+			.then(createdTopic => {
+				createdTopic.addPost(createdPost)
+			})
+		})	
+	})
+
+	res.send(req.body)
 })
 
 module.exports = router
