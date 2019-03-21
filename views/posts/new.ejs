@@ -26,10 +26,9 @@
 			<div class="row">
 				<div class="input-field col s12 m6">
 					<select name="siteId" id="site">
-						<option value="id"> Here is a site</option>
-						<option value="id"> Here is a site</option>
-						<option value="id"> Here is a site</option>
-						<option value="id"> Here is a site</option>
+						<% sites.forEach(function (site) { %>
+						<option value="id"> <%= site.dataValues.name %> </option>
+						<% }) %>
 					</select>
 					<label for="site">Sites:</label>
 				</div>
