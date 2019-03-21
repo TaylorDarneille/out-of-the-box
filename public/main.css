@@ -107,6 +107,22 @@ body {
 	border-radius: 50% !important;
 }
 
+.select-wrapper .dropdown-content li > span,
+.select-wrapper input.select-dropdown {
+	white-space: nowrap !important;
+	text-overflow: ellipsis !important;
+}
+
+.select-wrapper .dropdown-content li > span {
+	font-size: 1rem !important;
+	overflow: hidden;
+}
+
+.select-wrapper input.select-dropdown {
+	width: 85% !important;
+	padding-right: 15% !important;
+}
+
 /* label color */
 label {
 	color: #64ffda !important;
