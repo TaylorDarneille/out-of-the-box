@@ -103,8 +103,24 @@ body {
 }
 
 .select-wrapper .caret {
-	background-color: #64ffdba8 !important;
+	background-color: #64ffdb !important;
 	border-radius: 50% !important;
+}
+
+.select-wrapper .dropdown-content li > span,
+.select-wrapper input.select-dropdown {
+	white-space: nowrap !important;
+	text-overflow: ellipsis !important;
+}
+
+.select-wrapper .dropdown-content li > span {
+	font-size: 1rem !important;
+	overflow: hidden;
+}
+
+.select-wrapper input.select-dropdown {
+	width: 85% !important;
+	padding-right: 15% !important;
 }
 
 /* label color */
