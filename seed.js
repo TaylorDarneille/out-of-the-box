@@ -11,9 +11,10 @@ request('https://www.doc.wa.gov/corrections/incarceration/default.htm', (error, 
 		return {
 			name: deconstructedName.join(" "),
 			abbreviation: rawAbbr.substring(1, rawAbbr.length-1),
-			url: $(element).attr('href')
+			url: "https://www.doc.wa.gov/corrections/incarceration/"+$(element).attr('href')
 		}
 	}).get();
 	const sites = list.splice(1)
-	db.site.bulkCreate(sites)
+	console.log(sites)
+	// db.site.bulkCreate(sites)
 })
