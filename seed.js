@@ -15,6 +15,5 @@ request('https://www.doc.wa.gov/corrections/incarceration/default.htm', (error, 
 		}
 	}).get();
 	const sites = list.splice(1)
-	console.log(sites)
-	// db.site.bulkCreate(sites)
+	db.site.bulkCreate(sites)
 })
